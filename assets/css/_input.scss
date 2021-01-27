@@ -1,0 +1,25 @@
+.form {
+  label {
+    display: block;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 8px;
+    line-height: 1.375;
+  }
+
+  .form-control {
+    height: 50px;
+    width: 100%;
+    max-width: 482px;
+    border: solid 1px $color-gray;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 0;
+
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+      color: $color-base2;
+    }
+  }
+}

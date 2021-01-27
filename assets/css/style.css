@@ -1,0 +1,362 @@
+@charset "UTF-8";
+.form label {
+  display: block;
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 8px;
+  line-height: 1.375;
+}
+.form .form-control {
+  height: 50px;
+  width: 100%;
+  max-width: 482px;
+  border: solid 1px #a7babf;
+  font-size: 20px;
+  padding: 12px;
+  border-radius: 0;
+}
+.form .form-control:focus {
+  outline: 0;
+  box-shadow: none;
+  color: #757474;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  vertical-align: bottom;
+  border: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: inherit;
+}
+a:visited, a:hover {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+@media only screen and (min-width: 640px) {
+  a[href^="tel:"] {
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.header {
+  color: #7db827;
+  background-color: aqua;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.header.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: smoothScroll 1s forwards;
+  z-index: 99;
+}
+.header-nav-list {
+  display: flex;
+}
+.header-nav-item {
+  margin-left: 20px;
+}
+.header-nav-item a {
+  color: #7db827;
+}
+
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.header-nav__hamburger {
+  display: none;
+}
+
+@media print, screen and (max-width: 640px) {
+  body.no-scroll {
+    position: fixed;
+    width: 100%;
+  }
+
+  .header-nav {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    align-items: center;
+    padding: 80px 0 0;
+    display: none;
+    background: transparent;
+    pointer-events: auto;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.97);
+  }
+  .header-nav-list {
+    flex-direction: column;
+  }
+  .header-nav-item {
+    padding: 12px;
+    margin-bottom: 12px;
+    margin-left: 0;
+  }
+  .header-nav-link.is-active {
+    color: red;
+  }
+
+  .header-nav__hamburger {
+    display: block;
+    height: 21px;
+    width: 30px;
+    position: relative;
+    right: 24px;
+    outline: none;
+    z-index: 101;
+  }
+  .header-nav__hamburger span {
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    transform: translateY(-50%);
+    background: #7db827;
+  }
+  .header-nav__hamburger::after, .header-nav__hamburger::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background: #7db827;
+    transition: transform 0.3s ease;
+  }
+  .header-nav__hamburger::before {
+    top: 0;
+  }
+  .header-nav__hamburger:after {
+    bottom: 0;
+  }
+  .header-nav__hamburger.is-active span {
+    background: transparent;
+  }
+  .header-nav__hamburger.is-active::before {
+    top: 10px;
+    transform: rotate(-45deg);
+  }
+  .header-nav__hamburger.is-active:after {
+    bottom: auto;
+    top: 10px;
+    transform: rotate(45deg);
+  }
+}
+.main-visual {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/img_parallax.jpg");
+  position: relative;
+  opacity: 0.65;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-visual__arrow {
+  align-self: flex-end;
+}
+.main-visual__arrow span {
+  position: relative;
+  animation-name: fadeUp;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.main-visual__arrow span:before {
+  position: relative;
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid #fff;
+  border-top: 2px solid #fff;
+  transform: rotate(135deg);
+}
+
+@keyframes fadeUp {
+  0% {
+    top: -25px;
+  }
+  100% {
+    top: 0;
+  }
+}
+.fadein {
+  background-color: #3399cc;
+  text-align: center;
+  width: 100%;
+  height: 300px;
+}
+
+.fadein {
+  opacity: 0.7;
+  transform: translate(0, 50px);
+  transition: all 500ms;
+}
+
+/* 画面内に入った状態 */
+.fadein.scrollin {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.main .box {
+  width: 100%;
+  height: 250px;
+  border: 1px solid #a7babf;
+  margin-bottom: 30px;
+}
+
+.pagetop {
+  position: fixed;
+  bottom: 50px;
+  right: -100px;
+  transition: all 0.3s ease;
+  z-index: 9;
+}
+.pagetop.show-to-top {
+  right: 50px;
+}
+
+.accordion-container {
+  position: relative;
+  max-width: 500px;
+  height: auto;
+  margin: 10px auto;
+}
+.accordion-container > h2 {
+  text-align: center;
+  color: #fff;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.set {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+}
+.set > a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.2s linear;
+}
+.set > a i {
+  float: right;
+  margin-top: 2px;
+}
+.set > a.active {
+  background-color: #3399cc;
+  color: #fff;
+}
+
+.content {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  display: none;
+}
+.content p {
+  padding: 10px 15px;
+  margin: 0;
+  color: #333;
+}
+
+.tabbedPanels {
+  width: 600px;
+  margin-top: 25px;
+}
+
+.panelContainer {
+  clear: left;
+  margin-bottom: 25px;
+  border: 2px solid green;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tabs li {
+  float: left;
+  width: 75px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 2px;
+}
+.tabs a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px;
+  margin-right: 4px;
+  border: 2px solid green;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: green;
+  margin-bottom: -2px;
+}
+.tabs a.active {
+  border-bottom: 2px solid white;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+.panel img {
+  margin-top: 10px;
+}
+.panel p {
+  margin-bottom: 0px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+  <meta name="format-detection" content="telephone=no">
+  <title>Setup</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.ico" />
+  <link rel="apple-touch-icon" type="image/png" href="./assets/img/apple-touch-icon.png" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <header id="header" class="header">
+      <div class="header-logo">
+        <h1><a href="">Logo</a></h1>
+      </div>
+      <nav class="header-nav">
+        <ul class="header-nav-list">
+          <li class="header-nav-item"><a class="header-nav-link" href="#home">Home</a></li>
+          <li class="header-nav-item"><a class="header-nav-link" href="#about">About</a></li>
+          <li class="header-nav-item"><a class="header-nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="javascript:void(0)" class="header-nav__hamburger">
+        <span>MENU</span>
+      </a>
+    </header>
+
+    <div class="main-visual">
+      <div class="main-visual__des">
+        <h2>This full page background</h2>
+        <p>Background Image</p>
+      </div>
+      <div class="main-visual__arrow">
+        <span>&nbsp;</span>
+      </div>
+    </div>
+
+    <main class="main">
+
+      <div class="fadein">
+        This fade In effect
+      </div>
+
+      <div class="accordion-container">
+        <h2>jQuery Accordion</h2>
+        <div class="set">
+          <a href="#">
+            Vestibulum
+            <i class="fa fa-plus"></i>
+          </a>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna.</p>
+          </div>
+        </div>
+        <div class="set">
+          <a href="#">
+            Phasellus
+            <i class="fa fa-plus"></i>
+          </a>
+          <div class="content">
+            <p> Aliquam cursus vitae nulla non rhoncus. Nunc condimentum erat nec dictum tempus. Suspendisse aliquam
+              erat hendrerit vehicula vestibulum.</p>
+          </div>
+        </div>
+        <div class="set">
+          <a href="#">
+            Praesent
+            <i class="fa fa-plus"></i>
+          </a>
+          <div class="content">
+            <p>Pellentesque aliquam ligula libero, vitae imperdiet diam porta vitae. sed do eiusmod tempor incididunt ut
+              labore et dolore magna.</p>
+          </div>
+        </div>
+        <div class="set">
+          <a href="#">
+            Curabitur
+            <i class="fa fa-plus"></i>
+          </a>
+          <div class="content">
+            <p> Donec tincidunt consectetur orci at dignissim. Proin auctor aliquam justo, vitae luctus odio pretium
+              scelerisque. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabbedPanels">
+        <!-- begins the tabbed panels / wrapper-->
+
+        <ul class="tabs">
+          <li><a data-tab="panel-1" href="#">Kevin</a></li>
+          <li><a data-tab="panel-2" href="#">Joan</a></li>
+          <li><a data-tab="panel-3" href="#">Al</a></li>
+          <li><a data-tab="panel-4" href="#">Teresa</a></li>
+        </ul>
+
+        <div class="panelContainer">
+          <div id="panel-1" class="panel">
+            <p>
+              In spite of this tragedy, Kevin desired to bring good out of it, by spreading the word about the need for
+              organ donation, and by supporting others in support groups. Kevin was on a waiting list for a kidney
+              transplant.
+            </p>
+          </div> <!-- end panel 1 -->
+
+          <div id="panel-2" class="panel">
+            <p>
+              Joan, Kevin's mother, was the first volunteer as a donor. Although she was a match, she was temporarily
+              disqualified as a kidney donor at that time. Joan has coordinated Organ Donation Awareness Acitivities at
+              her place of work.
+            </p>
+          </div> <!-- end panel 2 -->
+          <div id="panel-3" class="panel">
+            <p>
+              Al, a relative, began a crusade of providing friends and other relatives with this information, in the
+              hopes of finding a kidney donor. Al was a match, but was temporarily disqualified as a kidney donor at
+              that time.
+            </p>
+          </div> <!-- end panel 3 -->
+          <div id="panel-4" class="panel">
+            <p>
+              Teresa, also a relative and a website developer, volunteered to develop the website in September 2007, in
+              cooperation with Al, Kevin and Joan. The goal of the website is to provide information and support to
+              those in similar situations.
+            </p>
+          </div> <!-- end panel 4 -->
+        </div> <!-- end div class="panelContainer" or panel wrapper -->
+      </div> <!-- ends the tabbed panels / wrapper-->
+
+
+      <section id="home">
+        <h2>Home</h2>
+        <div class="box">1</div>
+        <div class="box">2</div>
+      </section>
+      <section id="about">
+        <h2>About</h2>
+        <div class="box">3</div>
+        <div class="box">4</div>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="box">5</div>
+        <form>
+          <div class="form">
+            <label for="name">User name</label>
+            <input type="text" class="form-control" placeholder="Enter username">
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer">
+      <a href="#" class="pagetop" id="toTop"><span class="pagetop__icon">PAGETOP</span></a>
+      <div class="footer-copyright">
+        <small>Copyright &copy; All Rights Reserved.</small>
+      </div>
+    </footer>
+  </div>
+  <!-- /wrapper-->
+  <script src="./assets/js/jquery-3.5.1.min.js"></script>
+  <script src="./assets/js/wow.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
